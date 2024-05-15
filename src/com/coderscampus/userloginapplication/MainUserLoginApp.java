@@ -1,11 +1,14 @@
 package com.coderscampus.userloginapplication;
 import java.io.IOException;
+import java.io.FileReader;
 import java.util.*;
+
 public class MainUserLoginApp {
     public static void main(String[] args) {
         UserService userService = new UserService();
+
         try {
-            User[] users = userService.usersFile("data.txt");
+            User[] users = userService.usersFile(userService.filePath);
             Scanner scanner = new Scanner(System.in);
             int loginAttempts = 0;
             final int MAX_ATTEMPTS = 5;

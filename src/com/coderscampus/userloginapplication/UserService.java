@@ -4,8 +4,10 @@ import java.io.FileReader;
 import java.io.IOException;
 
 public class UserService {
-    public User[] usersFile (String dataText) throws IOException {
-        BufferedReader reader = new BufferedReader(new FileReader(dataText));
+
+    String filePath = "C:\\Users\\carra\\OneDrive\\Desktop\\BootCamp Workspace\\Assignments\\joeCar-Assignment-3\\JoeCar-Assignment_3\\resources\\data.txt";
+    public User[] usersFile (String filePath) throws IOException {
+        BufferedReader reader = new BufferedReader(new FileReader(filePath));
         int fileLines = 0;
         while (reader.readLine() != null) {
             fileLines++;
@@ -13,7 +15,7 @@ public class UserService {
         reader.close();
 
         User[] users = new User[fileLines];
-        reader = new BufferedReader(new FileReader(dataText));
+        reader = new BufferedReader(new FileReader(filePath));
         String line;
 
         int index = 0;
