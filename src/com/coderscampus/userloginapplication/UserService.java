@@ -1,12 +1,14 @@
 package com.coderscampus.userloginapplication;
+
 import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.IOException;
 
 public class UserService {
 
-    String filePath = "C:\\Users\\carra\\OneDrive\\Desktop\\BootCamp Workspace\\Assignments\\joeCar-Assignment-3\\JoeCar-Assignment_3\\resources\\data.txt";
-    public User[] usersFile (String filePath) throws IOException {
+    String filePath = "resources\\data.txt";
+
+    public User[] usersFile(String filePath) throws IOException {
         BufferedReader reader = new BufferedReader(new FileReader(filePath));
         int fileLines = 0;
         while (reader.readLine() != null) {

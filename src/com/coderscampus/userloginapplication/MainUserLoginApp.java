@@ -1,7 +1,8 @@
 package com.coderscampus.userloginapplication;
+
 import java.io.IOException;
 import java.io.FileReader;
-import java.util.*;
+import java.util.Scanner;
 
 public class MainUserLoginApp {
     public static void main(String[] args) {
@@ -20,7 +21,7 @@ public class MainUserLoginApp {
                 String password = scanner.nextLine();
 
                 if (userService.validateLogin(users, username, password)) {
-                    for (User user: users) {
+                    for (User user : users) {
                         if (user.getUsername().equalsIgnoreCase(username)) {
                             System.out.println("Welcome: " + user.getName());
                             return;
